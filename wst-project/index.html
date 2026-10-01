@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Website Name – Games</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="glass">
+  <a class="brand" href="#top">Website Name</a>
+  <nav aria-label="Main"><a href="#top">Home</a><a href="#games">Games</a><a href="#about">About</a><a href="#favorites">Favorite</a></nav>
+  <input class="search" id="q" type="search" placeholder="Search bar" aria-label="Search games">
+  <button class="icon-btn" id="openSettings" aria-label="Settings"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.4 13a7.5 7.5 0 0 0 0-2l2.1-1.6-2-3.5-2.5 1a7.6 7.6 0 0 0-1.7-1L15 3.3h-4l-.4 2.6a7.6 7.6 0 0 0-1.7 1l-2.5-1-2 3.5L6.6 11a7.5 7.5 0 0 0 0 2l-2.1 1.6 2 3.5 2.5-1a7.6 7.6 0 0 0 1.7 1l.4 2.6h4l.4-2.6a7.6 7.6 0 0 0 1.7-1l2.5 1 2-3.5zM12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z" transform="translate(-.5 0)"/></svg></button>
+</header>
+
+<main id="top">
+  <section class="hero" id="hero">
+    <div class="tint" id="tint" aria-hidden="true"></div>
+    <div class="left">
+      <div class="cf-wrap" role="group" aria-label="Featured games">
+        <button class="arr" id="cfPrev" aria-label="Previous game">◀</button>
+        <div class="stage" id="stage"></div>
+        <button class="arr" id="cfNext" aria-label="Next game">▶</button>
+      </div>
+      <button class="square" id="sq" aria-label="Open game details"><span id="sqEmoji" aria-hidden="true"></span></button>
+    </div>
+    <div class="panel glass">
+      <div class="tags"><b>New this week</b><span id="heroType"></span></div>
+      <h1 id="heroName"></h1>
+      <p id="heroDesc"></p>
+      <div class="btns"><button class="btn main" id="heroPlay">▶ Play</button><button class="btn soft" id="heroInfo">More info</button></div>
+    </div>
+  </section>
+  <div id="games"></div>
+  <div id="favorites"></div>
+  <section id="about"><div class="about glass"><h2>About</h2><p>Website Name is a hand-picked list of games that are easy to start and hard to put down. Browse by row, save what you like, and find your next favorite fast.</p></div></section>
+</main>
+<footer>© 2026 Website Name</footer>
+
+<dialog id="settings">
+  <h2>Settings</h2>
+  <label>Theme<select id="theme"><option value="dark">Dark glass</option><option value="light">Light glass</option></select></label>
+  <p style="text-align:right;margin:14px 0 0"><button class="btn main" id="closeSettings">Done</button></p>
+</dialog>
+<dialog id="info"><h2 id="iName"></h2><p id="iDesc" style="color:var(--muted)"></p><p style="text-align:right;margin:14px 0 0"><button class="btn main" id="iPlay">▶ Play</button> <button class="btn soft" id="iClose">Close</button></p></dialog>
+<div class="toast glass" id="toast" role="status"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
